@@ -3,6 +3,11 @@
 * {
     background: white;
 }
+
+.heading {
+    text-align: center;
+}
+
 #atlien {
     width: 100px;
     margin: 10px;
@@ -23,8 +28,9 @@ h1 {
 .container {
     font-family: 'Exo 2', sans-serif;
     font-size: 18px;
-    color: rgb(10, 17, 82)
-
+    color: rgb(10, 17, 82);
+    padding-left: 2vw;
+    text-align: center;
 }
 
 .atlBtn{
@@ -47,6 +53,10 @@ h1 {
     background: rgb(18, 42, 177);
 }
 
+.atlanta-form{
+    display: inline-block !important;
+}
+
 #find-atlanta {
     font-family: 'Exo 2', sans-serif;
     border-radius: 5px;
@@ -67,7 +77,11 @@ h1 {
     background: rgb(18, 42, 177);
 }
 
-/* reset css required to override UAstyling on browser */
-#atlGIFviews  {
-    display: inline-block !important;
+#atlGIFviewer  > div {
+   
+}
+
+#atlGIFviews  > div  > img{
+   border-radius:  4px;
+   display:  inline-block !important;
 }

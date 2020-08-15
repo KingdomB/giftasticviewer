@@ -61,11 +61,11 @@ function setup() {
         url: queryURL,
         method: 'GET'
     }).then(function(response) {
-        console.log(response);
+        // console.log(response);
 
         $('.atlanta').empty(); //clears the .atlanta div
         var results= response.data;
-        console.log (results);
+        // console.log (results);
         const gifDiv= $('<div>');
 
         for (var i= 0; i < results.length; i++) {
@@ -79,8 +79,8 @@ function setup() {
 
             const atlGifImg= $('<img>').attr('src', atlImgURL);
 
-            gifDiv.prepend(displayatlRating);
-            gifDiv.prepend(atlGifImg);
+            gifDiv.append(displayatlRating);
+            gifDiv.append(atlGifImg);
         }
 
         $('#atlGIFviews').html(gifDiv);
