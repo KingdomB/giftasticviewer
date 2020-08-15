@@ -70,10 +70,10 @@ function setup() {
 
         for (var i= 0; i < results.length; i++) {
             
-            const atlRating= results[i].rating;
+            const atlRating= results[i].rating.toUpperCase();
             // console.log(atlRating);
 
-            const displayatlRating= $('<p>').text('Rated" ' + atlRating);
+            const displayatlRating= $('<p>').text('Rated ' + atlRating);
             const atlImgURL= results[i].images.downsized_large.url;
             // console.log(atlImgURL);
 
