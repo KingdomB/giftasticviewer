@@ -55,7 +55,7 @@ function renderAtlButton() {
 function setup() {
 
     const gif= $(this).attr('dataname');
-    const queryURL= 'https://api.giphy.com/v1/gifs/search?q=' + gif + '&api_key=NMrK8FMx0rQ1Kt0xzUd6rwinAB2f0eNN' + '&limit=10';
+    const queryURL= 'https://api.giphy.com/v1/gifs/search?q=' + gif + '&api_key=mr2xj2V0vFXj6MFAvCH7R0S5FoCO9KYv' + '&limit=12';
 
     $.ajax({
         url: queryURL,
@@ -79,11 +79,16 @@ function setup() {
 
             const atlGifImg= $('<img>').attr('src', atlImgURL);
 
-            gifDiv.append(displayatlRating);
-            gifDiv.append(atlGifImg);
-        }
+            
+            const gifWrapper=$('<div>');
 
-        $('#atlGIFviews').html(gifDiv);
+            gifWrapper.append(displayatlRating);
+            gifWrapper.append(atlGifImg);
+            gifDiv.append(gifWrapper)
+
+            
+            $('#atlGIFviews').html(gifDiv)
+        }
     })
 };
 $('#find-atlanta').on('click', function() {
@@ -93,8 +98,6 @@ $('#find-atlanta').on('click', function() {
     renderAtlButton();
     // console.log(availableAtl);
 });
-
-//$('.atlBtn').on('click', setup()); IDK what this part is
 
 $(document).on('click', '.atlBtn', setup);
 renderAtlButton();
