@@ -6,15 +6,6 @@
 // PATH
 // GET /v1/gifs/search
 
-// key: tLhhmbIr7oigYS7Q6RvF9zhGa48cHBic
-
-// search parameters:
-// q= rainbow
-
-
-var api= "https://api.giphy.com/v1/gifs/search?";
-var apiKey= "&api_key=tLhhmbIr7oigYS7Q6RvF9zhGa48cHBic";
-
 var availableAtl = [
     'Atlanta',
     'Hip-hop',
@@ -56,7 +47,7 @@ function renderAtlButton() {
 function setup() {
 
     const gif= $(this).attr('dataname');
-    const queryURL= 'https://api.giphy.com/v1/gifs/search?q=' + gif + '&api_key=mr2xj2V0vFXj6MFAvCH7R0S5FoCO9KYv' + '&limit=12';
+    const queryURL= 'https://api.giphy.com/v1/gifs/search?q=' + gif + '&api_key=0FeAXOk3yrbWRqj9kxkmMaXU9H1pxoSL' + '&limit=12';
 
     $.ajax({
         url: queryURL,
@@ -64,7 +55,7 @@ function setup() {
     }).then(function(response) {
         // console.log(response);
 
-        $('.atlanta').empty(); //clears the .atlanta div
+        
         var results= response.data;
         // console.log (results);
         const gifDiv= $('<div>');
@@ -92,12 +83,21 @@ function setup() {
         }
     })
 };
+
 $('#find-atlanta').on('click', function() {
     event.preventDefault();
+    const searchText = $('input[type="text"]').val()
+
+   if (searchText) {
+
     var newButton= $('#atlanta-input').val().trim();
     availableAtl.push(newButton);
     renderAtlButton();
+    $('input[type="text"]').val('');//clears the .atlanta div
+    $( "#find-atlanta" ).toggleClass( 'find-atlanta')
+    
     // console.log(availableAtl);
+   }
 });
 
 $(document).on('click', '.atlBtn', setup);

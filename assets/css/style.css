@@ -25,6 +25,12 @@ h1 {
     color: rgb(10, 17, 82)
 }
 
+#attribution-mark {
+    width: 6%;
+    height:  3%;
+    object-fit: contain;
+ }
+
 .container {
     font-family: 'Exo 2', sans-serif;
     font-size: 18px;
@@ -55,17 +61,15 @@ h1 {
 
 #atlanta-form{
     display: inline-flex;
-    margin: 6px;
+ }
+
+form {
+    margin-top: 1%;
 }
 
-#form-label {
-    padding-top: 2%;
-}
-
-#atlanta-input {
-    margin-left: .5vw;
-    margin-top: .6vh;
-    height:  3vh;
+.form-content {
+    margin-right: .3vw;
+    height:  30px;
 }
 
 #find-atlanta {
@@ -79,9 +83,9 @@ h1 {
     text-align: center;
     display: inline-block;
     font-size: 15px;
-    margin: 8px 4px;
     cursor: pointer;
-    height: 50px
+    height:  35px;
+    outline: none;
 }
 
 #find-atlanta:hover {

@@ -16,7 +16,11 @@
     <body>
 
             <div class= "heading">
-                <h1><img src="assets/images/atlien.png" id="atlien" alt="Atlien"/>Getting Giphy in Atlanta</h1>
+                <h1>
+                    <img src="assets/images/atlien.png" id="atlien" alt="Atlien"/>
+                    Getting Giphy in Atlanta
+                    <img id="attribution-mark" src="assets/images/PoweredBy_200px-White_HorizLogo.png" alt="Powered by Giphy Attribution Mark">
+                </h1>
             </div>
 
             <div class= "container">
@@ -32,14 +36,14 @@
                 <!-- user input for the search -->
                 <form id="atlanta-form">
 
-                    <label id="form-label" for= "atlanta-input">Search for more GIFs</label>
+                    <label class="form-content" id="form-label" for= "atlanta-input">Search for more GIFs</label>
 
-                    <input type= "text" id="atlanta-input">
+                    <input class="form-content" type= "text" id="atlanta-input">
 
                     <br>
 
                     <!-- triggers AJAX call and new button to be added -->
-                    <input id= "find-atlanta" type= "submit" value= "Search">
+                    <input class="form-content" class="find-atlanta" id="find-atlanta" type= "submit" value= "Search">
 
                 </form>
 
