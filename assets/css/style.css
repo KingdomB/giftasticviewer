@@ -58,6 +58,10 @@ h1 {
     margin: 6px;
 }
 
+#form-label {
+    padding-top: 2%;
+}
+
 #atlanta-input {
     margin-left: .5vw;
     margin-top: .6vh;
@@ -75,9 +79,9 @@ h1 {
     text-align: center;
     display: inline-block;
     font-size: 15px;
-    margin: 4px 4px;
+    margin: 8px 4px;
     cursor: pointer;
-    height: 4vh
+    height: 50px
 }
 
 #find-atlanta:hover {
