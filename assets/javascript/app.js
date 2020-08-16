@@ -47,7 +47,7 @@ function renderAtlButton() {
 function setup() {
 
     const gif= $(this).attr('dataname');
-    const queryURL= 'https://api.giphy.com/v1/gifs/search?q=' + gif + '&api_key=0FeAXOk3yrbWRqj9kxkmMaXU9H1pxoSL' + '&limit=12';
+    const queryURL= 'https://api.giphy.com/v1/gifs/search?q=' + gif + '&api_key=Cb2Sg8m1yul7FtMbpp1lozNg98AUpyeg' + '&limit=12';
 
     $.ajax({
         url: queryURL,
