@@ -11,6 +11,7 @@
 // search parameters:
 // q= rainbow
 
+
 var api= "https://api.giphy.com/v1/gifs/search?";
 var apiKey= "&api_key=tLhhmbIr7oigYS7Q6RvF9zhGa48cHBic";
 
