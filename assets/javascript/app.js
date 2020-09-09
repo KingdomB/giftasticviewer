@@ -36,7 +36,7 @@ function renderAtlButton() {
     for (var i= 0; i < availableAtl.length; i++) {
         // console.log(availableAtl[i]);
 
-        const button= $('<button>'); //dynamically creating buttons
+        const button = $('<button>'); //dynamically creating buttons
         button.addClass('atlBtn');
         button.attr("dataname", availableAtl[i]); 
         button.text(availableAtl[i]); //text for buttons
@@ -46,8 +46,8 @@ function renderAtlButton() {
 
 function setup() {
 
-    const gif= $(this).attr('dataname');
-    const queryURL= 'https://api.giphy.com/v1/gifs/search?q=' + gif + '&api_key=Cb2Sg8m1yul7FtMbpp1lozNg98AUpyeg' + '&limit=12';
+    const gif = $(this).attr('dataname');
+    const queryURL = `https://api.giphy.com/v1/gifs/search?q=${gif}&api_key=0FeAXOk3yrbWRqj9kxkmMaXU9H1pxoSL&limit=12`;
 
     $.ajax({
         url: queryURL,
@@ -56,23 +56,23 @@ function setup() {
         // console.log(response);
 
         
-        var results= response.data;
+        var results = response.data;
         // console.log (results);
-        const gifDiv= $('<div>');
+        const gifDiv = $('<div>');
 
-        for (var i= 0; i < results.length; i++) {
+        for (var i = 0; i < results.length; i++) {
             
-            const atlRating= results[i].rating.toUpperCase();
+            const atlRating = results[i].rating.toUpperCase();
             // console.log(atlRating);
 
-            const displayatlRating= $('<p>').text('Rated ' + atlRating);
-            const atlImgURL= results[i].images.downsized_large.url;
+            const displayatlRating = $('<p>').text('Rated ' + atlRating);
+            const atlImgURL = results[i].images.downsized_large.url;
             // console.log(atlImgURL);
 
-            const atlGifImg= $('<img>').attr('src', atlImgURL);
+            const atlGifImg = $('<img>').attr('src', atlImgURL);
 
             
-            const gifWrapper=$('<div>');
+            const gifWrapper = $('<div>');
 
             gifWrapper.append(displayatlRating);
             gifWrapper.append(atlGifImg);
